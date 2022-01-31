@@ -4,33 +4,6 @@
 https://github.com/ansible
 https://github.com/ansible-community/ansible-lint/tree/main/examples/playbooks
 
-PROCEDURE:
-Created a Oracle Virtual box Virtual Machines
- 1. CentOS 8.4
- 2. RHEL 7.9
-
- - CentOs is the controller machine
- - RHEL is the Target machine
-
- - Installed Mobaxterm for the Remote SSH Connection to the Controller
-
- Configured Visual studio code as the Development Environment 
- Installed Ansible extension to work with Ansible Playbook-  Create and run the playbook  form VS Code
- Installed YAML Extension to check for the Syntax errors while writing the playbook
- Installed the SFTP Extension to connect to the Control machine to transfer the file to  the controller machine (Local to Remote)
- 
- SFTP CONFIG FILE:
- sftp.json
- {
-    "name": "osboxes",
-    "host": "xxx.xx.xxx.xx",
-    "protocol": "sftp",
-    "port": 22,
-    "username": "osboxes",
-    "password": "osboxes.org",
-    "remotePath": "/home/osboxes/Desktop/ansible-role",
-    "uploadOnSave": true
-}
 
  - Pushed the code to the Azure DevOps repo through Git Bash or from VS Code
 
