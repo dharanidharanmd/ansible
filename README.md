@@ -23,7 +23,7 @@ Created a Oracle Virtual box Virtual Machines
  sftp.json
  {
     "name": "osboxes",
-    "host": "192.168.0.104",
+    "host": "xxx.xx.xxx.xx",
     "protocol": "sftp",
     "port": 22,
     "username": "osboxes",
