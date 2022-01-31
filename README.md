@@ -1,6 +1,6 @@
 # ansible_playbooks
 
-			                                        ANSIBLE FOR LINUX:
+			                    ANSIBLE FOR LINUX:
 https://github.com/ansible
 https://github.com/ansible-community/ansible-lint/tree/main/examples/playbooks
 
