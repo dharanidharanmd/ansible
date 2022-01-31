@@ -1,0 +1,7 @@
+---
+- hosts: target
+  become: true
+  become_user: root
+  tasks:
+          - name: Rebooting the VM's
+            reboot:

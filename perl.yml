@@ -1,0 +1,11 @@
+---
+    - name: Install Perl
+      hosts: target
+      become: yes
+      become_user: root
+      tasks:
+        - name: Installing Perl
+          yum:
+            name: perl
+            state: latest
+        - debug: msg="Perl installation completed"  

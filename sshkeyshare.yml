@@ -1,0 +1,9 @@
+---
+ - name: Playbook for SSH Key sharing
+   hosts: all
+   tasks: 
+    - name: Establishing SSH Connection to the target nodes
+      authorized_key:
+        user: root
+        state: present
+        key: "{{lookup('file','/home/osboxes/.ssh/id_rsa.pub')}}"

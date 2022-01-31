@@ -1,0 +1,13 @@
+---
+- name: Installing PL/SQL Developer tool
+  hosts: target
+  tasks:
+    - name: Download the PL/SQL installer
+      win_get_url:
+        url: https://www.allroundautomations.com/files/trial/plsqldev1406x64.msi
+        dest: C:\tmp\plsqldev1406x64.msi
+
+    - name: Install PL/SQL
+      win_package:
+        path: C:\tmp\plsqldev1406x64.msi
+        state: present 

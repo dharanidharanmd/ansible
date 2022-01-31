@@ -1,0 +1,24 @@
+---
+#Install Oracle client from https://www.oracle.com/java/technologies/downloads/
+- hosts: target
+
+  tasks:
+    - name: Get the Oracle Client rpm package
+      get_url:
+       url: https://download.oracle.com/otn_software/linux/instantclient/1913000/oracle-instantclient19.13-basic-19.13.0.0.0-2.x86_64.rpm
+       dest: /tmp
+       checksum: "sha256: 3917080011"
+
+    - name: Install the Oracle client
+      yum:
+          name: /tmp/oracle-instantclient19.13-basic-19.13.0.0.0-2.x86_64.rpm
+          state: present
+      become: yes
+
+    - name: Remove Oracle client from tmp 
+      file: 
+       state: absent
+       path: /tmp/oracle-instantclient19.13-basic-19.13.0.0.0-2.x86_64.rpm
+
+
+

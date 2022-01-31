@@ -1,0 +1,25 @@
+---
+- name: Creation of New users
+  hosts: Exe_Vm
+  gather_facts: true
+  become_method: sudo
+  vars: 
+   default_password: dharani@99
+  tasks: 
+   - name: Create user tasks
+     user: 
+       
+       name: dharan
+       state: absent
+       groups: root
+       password: "{{default_password | password_hash('sha512')}}"
+       shell: /bin/bash
+       
+     register: var_user
+   - debug: 
+      var: var_user.stdout_lines
+
+
+
+
+...
