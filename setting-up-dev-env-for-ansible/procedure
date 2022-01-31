@@ -1,0 +1,37 @@
+A) Create Oracle Virtual box Virtual Machines
+ 1. CentOS 8.4 
+ 2. RHEL 7.9 
+
+ https://www.virtualbox.org/
+
+ - CentOs is the controller machine
+ - RHEL is the Target machine
+
+B) Install Mobaxterm for the Remote SSH Connection to the Controller and for the file transfer
+ https://mobaxterm.mobatek.net/
+
+C) Configure Visual studio code as the Development Environment 
+ https://code.visualstudio.com/
+
+
+ Installed Ansible extension to work with Ansible Playbook
+ https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html
+ 
+ Install YAML Extension to check for the Syntax errors while writing the playbook
+ https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
+
+ Install the SFTP Extension to connect to the Control machine to transfer the file to  the controller machine (Local to Remote)
+ https://marketplace.visualstudio.com/items?itemName=liximomo.sftp
+ 
+ SFTP CONFIG FILE:
+ sftp.json
+ {
+    "name": "Name for the connection",
+    "host": "xxx.xx.xxx.xx",
+    "protocol": "sftp",
+    "port": 22,
+    "username": "osboxes",
+    "password": "osboxes.org",
+    "remotePath": "/home/osboxes/Desktop/ansible",
+    "uploadOnSave": true
+}
