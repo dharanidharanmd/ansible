@@ -1,0 +1,13 @@
+---
+  - hosts: target
+    name: Installing Kornshell using Yum module
+    become: yes
+    become_user: root
+    
+    tasks:
+     - name: Installing Kornshell
+       yum:
+        name: ksh
+        update_cache: yes 
+        state: present
+

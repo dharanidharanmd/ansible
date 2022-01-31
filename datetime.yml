@@ -1,0 +1,7 @@
+---
+ - name: Set timezone to Asia/Tokyo
+   hosts: target
+   tasks:
+    - timezone:
+       name: Asia/Tokyo
+   

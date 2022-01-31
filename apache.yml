@@ -1,0 +1,14 @@
+---
+  - hosts: target
+    become: yes
+    tasks:
+      - name: install apache2
+        yum: 
+         name=httpd 
+         update_cache=yes 
+         state=latest
+      - name: ensure httpd is running
+        service:
+          name: httpd 
+          state: started
+         
