@@ -4,12 +4,12 @@
   gather_facts: true
   become_method: sudo
   vars: 
-   default_password: dharani@99
+   default_password: password@123
   tasks: 
    - name: Create user tasks
      user: 
        
-       name: dharan
+       name: user
        state: absent
        groups: root
        password: "{{default_password | password_hash('sha512')}}"
